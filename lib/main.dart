@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_shop/screens/home_screen.dart';
+import 'package:nike_cupboard/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
