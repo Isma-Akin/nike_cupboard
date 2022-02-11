@@ -13,6 +13,31 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+List<String> _tags = ["All", "Shoes", "Bags", "Clothing", "Cap"];
+int _selectedtag = 0;
+
+Widget _buildtags(int index) {
+      return GestureDetector(
+        onTap: () {
+          setState(() {
+          _selectedtag = index;});
+        },
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+          decoration: BoxDecoration(
+            color: _selectedtag == index ? AppColors.PRIMARY_COLOR : Colors.white,
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: Text(_tags[index],
+          style: TextStyle(
+            color: _selectedtag == index ? Colors.grey[400]: Colors.black,
+            fontFamily: "Poppins",),
+          ),
+        ),
+      );
+
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,8 +83,18 @@ class _HomeScreenState extends State<HomeScreen> {
                    radius: BorderRadius.circular(12),
                 )
               ],
-            )],
             ),
+              SizedBox(height: 25,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: _tags
+                    .asMap()
+                    .entries
+                    .map((MapEntry map) => _buildtags(map.key))
+                    .toList(),
+              )
+
+            ]),
           ),
         ),
       ),
