@@ -1,6 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:nike_cupboard/constants/constants.dart';
+
+import '../widgets/custom_icon_button.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -33,7 +36,26 @@ class _HomeScreenState extends State<HomeScreen> {
                   flex: 5,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(15),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.search),
+                      labelText: "Search",
+                      contentPadding: EdgeInsets.zero,
+                      filled: true,
+                      fillColor: AppColors.SECONDARY_COLOR,
+                      border: InputBorder.none,
+                    ),
                   ),
+                  ),
+                ),
+                SizedBox(
+                  width: 10,),
+                 customIconButton(
+                   backgroundColor: AppColors.SECONDARY_COLOR,
+                   child: Image.asset("assets/icons/filter.png"),
+                   splashColor: Colors.green,
+                   onTap: () {},
+                   radius: BorderRadius.circular(12),
                 )
               ],
             )],
