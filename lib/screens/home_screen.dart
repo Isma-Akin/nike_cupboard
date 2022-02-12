@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:nike_cupboard/constants/constants.dart';
 
+import '../data/data.dart';
 import '../widgets/custom_icon_button.dart';
 import '../widgets/shoe_card.dart';
 
@@ -95,7 +96,7 @@ Widget _buildtags(int index) {
                     .toList(),
               ),
                 SizedBox(height: 25,),
-                _buildShoeListView(),
+                _buildShoeListView(context),
 
             ]),
           ),
@@ -111,7 +112,7 @@ Widget _buildtags(int index) {
       physics: NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
       return ShoeCard(
-      shoe: ShoesData[index]
+      shoe: shoesData[index],
     );
   });
   }
