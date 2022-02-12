@@ -8,6 +8,14 @@ class ShoeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: shoe.backgroundColor,
+      ),
+      height: 100,
+      width: double.infinity,
+    );
   }
 }
