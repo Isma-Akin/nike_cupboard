@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nike_cupboard/data/data.dart';
+import 'package:nike_cupboard/widgets/custom%20_like_button.dart';
 
 class ShoeCard extends StatelessWidget {
   final ShoeDataModel shoe;
@@ -19,9 +20,11 @@ class ShoeCard extends StatelessWidget {
       width: double.infinity,
       child: Row(
         children: [
-          Expanded(child: Column(
+          Expanded(
+              child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              customLikeButton(),
               Center(
                 child: Container(
                   height: 120,
