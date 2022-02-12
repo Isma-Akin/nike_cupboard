@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:nike_cupboard/constants/constants.dart';
 
 import '../widgets/custom_icon_button.dart';
+import '../widgets/shoe_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -92,7 +93,9 @@ Widget _buildtags(int index) {
                     .entries
                     .map((MapEntry map) => _buildtags(map.key))
                     .toList(),
-              )
+              ),
+                SizedBox(height: 25,),
+                _buildShoeListView(),
 
             ]),
           ),
@@ -100,4 +103,18 @@ Widget _buildtags(int index) {
       ),
     );
   }
+
+  Widget _buildShoeListView(BuildContext context) {
+  return ListView.builder(
+      itemCount: shoesData.length,
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
+      itemBuilder: (context, index) {
+      return ShoeCard(
+      shoe: ShoesData[index]
+    );
+  });
+  }
+
+
 }
