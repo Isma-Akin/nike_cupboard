@@ -19,7 +19,7 @@ class ShoeDataModel {
   required this.tagLine,
   });
 }
-List<ShoeDataModel> shoesdata = [
+List<ShoeDataModel> shoesData = [
   ShoeDataModel(
     id: 1,
     name: "Nike Air Pegasus",
