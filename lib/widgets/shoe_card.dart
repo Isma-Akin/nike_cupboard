@@ -16,6 +16,21 @@ class ShoeCard extends StatelessWidget {
       ),
       height: 100,
       width: double.infinity,
+      child: Row(
+        children: [
+          Expanded(child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: Container(
+                  height: 120,
+                  width: 140,
+                  child: Image.asset(shoe.image),
+                ),
+            )],
+          ))
+        ],
+      )
     );
   }
 }
