@@ -12,6 +12,18 @@ class DetailsScreen extends StatefulWidget {
 }
 
 class _DetailsScreenState extends State<DetailsScreen> {
+  List<String> _sizeTags = ["36, 37, 38, 39, 40, 41, 42, 43, 44"];
+
+Widget _buildSizeTags(int index) {
+  return GestureDetector(
+    onTap: () {
+      setState(() {
+        _selectedSize = index;
+      });
+    },
+  );
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
