@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nike_cupboard/data/data.dart';
+import 'package:nike_cupboard/widgets/custom%20_like_button.dart';
 
 class DetailsScreen extends StatefulWidget {
   final ShoeDataModel shoesData;
@@ -33,9 +34,29 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       child: (Image.asset(widget.shoesData.image)),
                     ),
                     IconButton(onPressed: () {Navigator.pop(context);}
-                    , icon: Icon(Icons.arrow_back_ios_rounded))
+                    , icon: Icon(Icons.arrow_back_ios_rounded)
+                    ),
+                    Positioned(
+                      right: 10,
+                        top:10,
+                        child: customLikeButton())
                   ],
-                )
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(widget.shoesData.name,
+                style: Theme.of(context).textTheme.headline1,),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(widget.shoesData.tagLine,
+                style: Theme.of(context).textTheme.headline2,),
+                SizedBox(
+                  height: 10,
+                ),
+                Text("Select Size",
+                style: Theme.of(context).textTheme.headline5,),
               ],
             ),
           ),
