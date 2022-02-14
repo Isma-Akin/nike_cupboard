@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nike_cupboard/data/data.dart';
 import 'package:nike_cupboard/widgets/custom%20_like_button.dart';
+import 'package:nike_cupboard/widgets/custom_buy_button.dart';
 
 class ShoeCard extends StatelessWidget {
   final ShoeDataModel shoe;
@@ -54,7 +55,8 @@ class ShoeCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("\$\ ${shoe.price}",
-                    style: Theme.of(context).textTheme.headline4,)
+                    style: Theme.of(context).textTheme.headline4,),
+                  customBuyButton(),
                 ],
               )
             ],
