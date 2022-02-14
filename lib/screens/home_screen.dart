@@ -1,11 +1,10 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:nike_cupboard/constants/constants.dart';
 
 import '../data/data.dart';
 import '../widgets/custom_icon_button.dart';
 import '../widgets/shoe_card.dart';
+import '../screens/details_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -115,7 +114,10 @@ Widget _buildtags(int index) {
         children: [
           GestureDetector(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsScreen(shoesData[index])));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => DetailsScreen(
+                  shoesData[index])
+              ));
             },
             child: ShoeCard(
             shoe: shoesData[index],
