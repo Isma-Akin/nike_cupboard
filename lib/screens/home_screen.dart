@@ -111,9 +111,21 @@ Widget _buildtags(int index) {
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
-      return ShoeCard(
-      shoe: shoesData[index],
-    );
+      return Column(
+        children: [
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsScreen(shoesData[index])));
+            },
+            child: ShoeCard(
+            shoe: shoesData[index],
+         ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+        ],
+      );
   });
   }
 
