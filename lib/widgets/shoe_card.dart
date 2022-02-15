@@ -30,7 +30,9 @@ class ShoeCard extends StatelessWidget {
                 child: Container(
                   height: 120,
                   width: 140,
-                  child: Image.asset(shoe.image),
+                  child: Hero(
+                    tag: "${shoe.id}",
+                      child: Image.asset(shoe.image)),
                 ),
             )],
           )),
