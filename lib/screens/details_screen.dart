@@ -88,6 +88,7 @@ Widget _buildSizeTags(int index) {
                 ),
                 Text("Select Size",
                 style: Theme.of(context).textTheme.headline5,),
+                SizedBox(height: 10,),
                 Container(
                   height: 50,
                   width: double.infinity,
@@ -103,7 +104,40 @@ Widget _buildSizeTags(int index) {
                           width: 10,)
                       ],
                     );
-                  })),
+                  })
+                ),
+                SizedBox(height: 20,
+                ),
+                Text("Description",
+                style: Theme.of(context).textTheme.headline2,),
+                SizedBox(height: 10,),
+                Text(widget.shoesData.description,
+                style: Theme.of(context).textTheme.headline2,),
+                SizedBox(height: 20,),
+                Text("Reviews",
+                style: Theme.of(context).textTheme.headline5,),
+                SizedBox(height: 15,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Stack(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(color: Colors.white),
+                            ),
+                            child: CircleAvatar(
+                              backgroundImage: AssetImage('assets/images/people.jpg'),
+                            ),
+                        ),
+
+                        ],
+                      ),
+                    )
+                  ],
+                )
               ],
             ),
           ),
