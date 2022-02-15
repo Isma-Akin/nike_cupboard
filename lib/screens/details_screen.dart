@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nike_cupboard/constants/constants.dart';
 import 'package:nike_cupboard/data/data.dart';
 import 'package:nike_cupboard/widgets/custom%20_like_button.dart';
 
@@ -14,6 +15,8 @@ class DetailsScreen extends StatefulWidget {
 class _DetailsScreenState extends State<DetailsScreen> {
   List<String> _sizeTags = ["36, 37, 38, 39, 40, 41, 42, 43, 44"];
 
+  int _selectedSize = 0;
+
 Widget _buildSizeTags(int index) {
   return GestureDetector(
     onTap: () {
@@ -21,6 +24,22 @@ Widget _buildSizeTags(int index) {
         _selectedSize = index;
       });
     },
+    child: Container(
+      width: 50,
+      decoration: BoxDecoration(
+        color: _selectedSize == index ? AppColors.PRIMARY_COLOR : Colors.white,
+        borderRadius: BorderRadius.circular(25)
+      ),
+      child: Center(
+        child: Text(
+          _sizeTags[index],
+          style: TextStyle(
+            color: _selectedSize != index ? Colors.grey : Colors.white,
+            fontFamily: "Poppins",
+          ),
+        ),
+      ),
+    ),
   );
 }
 
