@@ -63,7 +63,9 @@ Widget _buildSizeTags(int index) {
                         borderRadius: BorderRadius.circular(12),
                         color: widget.shoesData.backgroundColor,
                       ),
-                      child: (Image.asset(widget.shoesData.image)),
+                      child: Hero(
+                          tag: "${widget.shoesData.backgroundColor}" ,
+                          child: (Image.asset(widget.shoesData.image))),
                     ),
                     IconButton(onPressed: () {Navigator.pop(context);}
                     , icon: Icon(Icons.arrow_back_ios_rounded)
