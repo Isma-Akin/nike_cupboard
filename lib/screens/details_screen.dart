@@ -88,6 +88,22 @@ Widget _buildSizeTags(int index) {
                 ),
                 Text("Select Size",
                 style: Theme.of(context).textTheme.headline5,),
+                Container(
+                  height: 50,
+                  width: double.infinity,
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: _sizeTags.length,
+                      itemBuilder: (context, index) {
+                    return Row(
+                      children: [
+                        _buildSizeTags(index),
+                        SizedBox(
+                          width: 10,)
+                      ],
+                    );
+                  })),
               ],
             ),
           ),
