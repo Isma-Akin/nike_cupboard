@@ -129,13 +129,50 @@ Widget _buildSizeTags(int index) {
                               border: Border.all(color: Colors.white),
                             ),
                             child: CircleAvatar(
-                              backgroundImage: AssetImage('assets/images/people.jpg'),
+                              backgroundImage: AssetImage('assets/images/people1.jpg'),
                             ),
                         ),
-
+                          Positioned(left: 30,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(color: Colors.white),
+                                ),
+                                child: CircleAvatar(
+                                  backgroundImage: AssetImage('assets/images/people2.jpg'),
+                                ),
+                              ),
+                          ),
+                          Positioned(left: 60,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.white),
+                              ),
+                              child: CircleAvatar(
+                                backgroundImage: AssetImage('assets/images/people3.jpg'),
+                              ),
+                            ),
+                          ),
+                          Positioned(left: 30,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.white),
+                              ),
+                              child: CircleAvatar(child:
+                              Text("+12",
+                                style: TextStyle(
+                                  color: Colors.white, fontSize: 13,
+                                ),
+                                ),
+                              ),
+                            ),
+                          )
                         ],
                       ),
-                    )
+                    ),
+
                   ],
                 )
               ],
