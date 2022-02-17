@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
 List<String> _tags = ["All", "Shoes", "Bags", "Clothing", "Cap"];
 int _selectedtag = 0;
 
+
 Widget _buildtags(int index) {
       return GestureDetector(
         onTap: () {
@@ -116,7 +117,7 @@ Widget _buildtags(int index) {
             onTap: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => DetailsScreen(
-                  shoesData[index])
+                  shoesData: shoesData[index],)
               ));
             },
             child: ShoeCard(
