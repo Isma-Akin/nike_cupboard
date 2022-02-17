@@ -4,6 +4,7 @@ Widget customBuyButton () {
   return InkWell(
     borderRadius: BorderRadius.circular(12),
     onTap: () {},
+    splashColor: Colors.white,
     child: Container(
       width: 60,
       height: 30,
