@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ShoeDataModel {
+class ShoeData {
   int id;
   String name;
   String description;
@@ -9,7 +9,7 @@ class ShoeDataModel {
   String tagLine;
   Color backgroundColor;
 
-  ShoeDataModel({
+  ShoeData({
   required this.backgroundColor,
   required this.description,
   required this.id,
@@ -19,8 +19,8 @@ class ShoeDataModel {
   required this.tagLine,
   });
 }
-List<ShoeDataModel> shoesData = [
-  ShoeDataModel(
+List<ShoeData> shoesData = [
+  ShoeData(
     id: 1,
     name: "Nike Air Pegasus",
     description: "A shoe is an item of footwear intended to protect and comfort the human foot",
@@ -29,7 +29,7 @@ List<ShoeDataModel> shoesData = [
     tagLine: "Footwear to last you a lifetime.",
     backgroundColor: Color(0xfffeae9),
   ),
-  ShoeDataModel(
+  ShoeData(
     id: 2,
     name: "Nike ZoomX",
     description: "A shoe is an item of footwear intended to protect and comfort the human foot",
@@ -38,7 +38,7 @@ List<ShoeDataModel> shoesData = [
     tagLine: "Designed for the freedom to walk.",
     backgroundColor: Color(0xffe9eff2),
   ),
-  ShoeDataModel(
+  ShoeData(
     id: 3,
     name: "Nike Air Light",
     description: "A shoe is an item of footwear intended to protect and comfort the human foot",
@@ -46,7 +46,7 @@ List<ShoeDataModel> shoesData = [
     image: "assets/images/1.png",
     tagLine: "Go faster, go stronger, never stop.",
     backgroundColor: Color(0xfffeae9),
-  ), ShoeDataModel(
+  ), ShoeData(
     id: 4,
     name: "Nike Air Light",
     description: "A shoe is an item of footwear intended to protect and comfort the human foot",
