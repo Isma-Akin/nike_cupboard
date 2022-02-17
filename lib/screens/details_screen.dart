@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:nike_cupboard/constants/constants.dart';
 import 'package:nike_cupboard/data/data.dart';
-import 'package:nike_cupboard/widgets/custom%20_like_button.dart';
+import 'package:nike_cupboard/widgets/custom_like_button.dart';
 import 'package:nike_cupboard/widgets/custom_icon_button.dart';
 
 class DetailsScreen extends StatefulWidget {
-  final ShoeDataModel shoesData;
-
-  const DetailsScreen({required Key key, required this.shoesData}) : super(key: key);
+  final ShoeData shoesData;
+  const DetailsScreen({required this.shoesData});
+  // const DetailsScreen({required Key key, required this.shoesData}) : super(key: key);
 
   @override
   _DetailsScreenState createState() => _DetailsScreenState();
