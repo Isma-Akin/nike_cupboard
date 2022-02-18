@@ -56,7 +56,7 @@ class ShoeCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("\$\ ${shoe.price}",
+                  Text("\$ ${shoe.price}",
                     style: Theme.of(context).textTheme.headline4,),
                   customBuyButton(),
                 ],
