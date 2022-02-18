@@ -14,7 +14,17 @@ class DetailsScreen extends StatefulWidget {
 }
 
 class _DetailsScreenState extends State<DetailsScreen> {
-  List<String> _sizeTags = ["36, 37, 38, 39, 40, 41, 42, 43, 44"];
+  List<String> _sizeTags = [
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+  ];
 
   int _selectedSize = 0;
 
