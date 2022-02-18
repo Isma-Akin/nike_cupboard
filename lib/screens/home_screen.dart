@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-List<String> _tags = ["All", "Shoes", "Bags", "Clothing", "Cap"];
+List<String> _tags = ["All", "Shoes", "Bags", "Clothing", "Caps"];
 int _selectedtag = 0;
 
 
@@ -32,12 +32,11 @@ Widget _buildtags(int index) {
           ),
           child: Text(_tags[index],
           style: TextStyle(
-            color: _selectedtag == index ? Colors.grey[400]: Colors.black,
+            color: _selectedtag == index ? Colors.black: Colors.black,
             fontFamily: "Poppins",),
           ),
         ),
       );
-
 }
 
   @override
@@ -51,12 +50,12 @@ Widget _buildtags(int index) {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Nike Collection",
+                Text("Nike Collections",
                   style: Theme.of(context).textTheme.headline1),
                 Text("The Best of Nike, all in one place",
                 style: Theme.of(context).textTheme.headline2),
                 SizedBox(
-                  height: 30,),
+                  height: 25,),
                 Row(
                   children: [
                 Expanded(
@@ -97,7 +96,6 @@ Widget _buildtags(int index) {
               ),
                 SizedBox(height: 25,),
                 _buildShoeListView(context),
-
             ]),
           ),
         ),
@@ -131,6 +129,4 @@ Widget _buildtags(int index) {
       );
   });
   }
-
-
 }
